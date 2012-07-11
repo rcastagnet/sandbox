@@ -1,0 +1,10 @@
+Template: sandbox-pve/server
+Type: string
+Default: dhcpdns
+Description: Nom de la machine (DHCP/DNS) ?
+
+Template: sandbox-pve/network
+Type: string
+Default: 192.168.0.0
+Description: Adresse du réseau privée à utiliser (/24) ?
+

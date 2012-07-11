@@ -1,0 +1,8 @@
+Package: sandbox-pve
+Version: 1.0
+Section: base
+Priority: optional
+Architecture: all
+Depends: bash
+Maintainer: MBS <mbs@orange.com>
+Description: Script de  création d'une plateforme de tests à partir de Proxmox VE.
