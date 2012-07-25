@@ -25,11 +25,11 @@ case "$1" in
 		PVECTL_BIN=/usr/bin/pvectl
 		VZCTL_BIN=/usr/sbin/vzctl
 		VZ_BIN=/var/lib/vz/private
+		TEMPLATE_BIN=/var/lib/vz/template/cache
 		
 		#### Variables
 		VMID=10
 		#VM_NAME='DHCP_DNS_server'
-		OS_TEMPLATE='local:vztmpl/debian-6.0-standard_6.0-4_i386.tar.gz'
 		DISK_SPACE=4
 		SWAP=512
 		MEMORY=1024
@@ -73,6 +73,10 @@ case "$1" in
                 IP_NETWORK="$RET"
                 db_stop
 
+		#### Téléchargement de l'image générique
+		cd $TEMPLATE_BIN
+		wget http://download.openvz.org/template/precreated/debian-6.0-x86.tar.gz
+		OS_TEMPLATE='local:vztmpl/debian-6.0-x86.tar.gz'
 
 		#### Configuration réseau de l'hôte
 		echo " │ Configure Networking Host"

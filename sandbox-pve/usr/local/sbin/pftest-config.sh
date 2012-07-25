@@ -72,7 +72,7 @@ fi
 function read_template {
 	TYPE=$1
 	declare -a TEMPLATES=(
-		'local:vztmpl/debian-6.0-standard_6.0-4_i386.tar.gz')
+		'local:vztmpl/debian-6.0-x86.tar.gz')
 	echo "  │   Templates available :"
 	echo "  │     1: debian 6.0 standard 32 bits"
 	read -p "  ├ Template number : [1] " TEMPLATE_NUMBER
